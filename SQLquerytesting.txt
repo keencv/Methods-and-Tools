@@ -4,3 +4,6 @@ VALUES( 312,"jack","dude","wow31","somebill","someship","2/5/22","321321323","55
 
 INSERT INTO cart(UserId, ItemId, ItemName, ItemDescription, ItemQuantity ,ItemCost)
 VALUES( 312,"1111","snacks","its food","22","55");
+
+INSERT INTO inventory(ItemId, ItemName, ItemDescription, ItemQuantity ,ItemCost)
+VALUES("2222","bnack","its food","22","55");

@@ -38,6 +38,7 @@ CREATE TABLE orderhistory(
 UserId int,
 ItemId int,
 ItemName varchar(25),
+ItemDescription varchar(25),
 ItemQuantity int,
 ItemCost float,
 FOREIGN KEY(UserId)
