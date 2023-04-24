@@ -22,6 +22,7 @@ PRIMARY KEY(ItemId)
 
 --I need the foreign key
 CREATE TABLE cart(
+UserId int,
 ItemId int,
 ItemName varchar(25),
 ItemDescription varchar(25),
