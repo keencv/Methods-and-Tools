@@ -1,3 +1,6 @@
 ##Insert user test query
 INSERT INTO user (UserId ,FirstName ,LastName ,Password ,BillingAddress ,ShippingAddress ,DateOfBirth ,CardNumber ,SecurityNumber)
 VALUES( 312,"jack","dude","wow31","somebill","someship","2/5/22","321321323","551");
+
+INSERT INTO cart(UserId, ItemId, ItemName, ItemDescription, ItemQuantity ,ItemCost)
+VALUES( 312,"1111","snacks","its food","22","55");
