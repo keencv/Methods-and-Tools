@@ -19,15 +19,18 @@ ItemQuantity int,
 ItemCost float,
 PRIMARY KEY(ItemId)
 );
---Note I am not using foreign keys due to the cart being more of a temp thing overall
+
+--I need the foreign key
 CREATE TABLE cart(
 ItemId int,
 ItemName varchar(25),
 ItemDescription varchar(25),
 ItemQuantity int,
 ItemCost float,
-PRIMARY KEY(ItemId)
+FOREIGN KEY(UserId)
+REFERENCES user(UserId)
 );
+
 --got to have primary key^
 --Forign key here to keep track of history
 CREATE TABLE orderhistory(
