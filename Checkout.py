@@ -78,9 +78,13 @@ def CheckoutFromCart(UserId):
         cursor.execute("UPDATE inventory SET ItemQuantity=? WHERE ItemId=?", (ItemQuantityM, ItemId))
         connection.commit()
 
+def DeleteFromCartAccountDelete(UserId):
+##Why would anyone put the same thing into the cart more than once
+    cursor.execute("DELETE FROM cart WHERE UserId=?", (UserId,))
+    connection.commit()
 
-#nume = 312
-#AddToCart(nume)
-#CheckoutFromCart(nume)
+##nume = 312
+##AddToCart(nume)
+##DeleteFromCartAccountDelete(nume)
 cursor.close()
 connection.close()
