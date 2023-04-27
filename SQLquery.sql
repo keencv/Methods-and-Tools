@@ -41,6 +41,7 @@ ItemName varchar(25),
 ItemDescription varchar(25),
 ItemQuantity int,
 ItemCost float,
+DateOrdered varchar(25),
 FOREIGN KEY(UserId)
 REFERENCES user(UserId)
 )
