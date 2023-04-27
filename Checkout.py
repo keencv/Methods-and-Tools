@@ -73,7 +73,7 @@ def CheckoutFromCart(UserId):
 
         ItemQuantityM = ItemQuantity2 - ItemQuantity1
         ItemCost = ItemCost * ItemQuantity1
-        cursor.execute( "INSERT INTO orderhistory (UserId, ItemId, ItemName, ItemDescription, ItemQuantity, ItemCost) VALUES(?,?,?,?,?,?)", (UserId, ItemId, ItemName, ItemDescription, ItemQuantity1, ItemCost))
+        ##cursor.execute( "INSERT INTO orderhistory (UserId, ItemId, ItemName, ItemDescription, ItemQuantity, ItemCost) VALUES(?,?,?,?,?,?)", (UserId, ItemId, ItemName, ItemDescription, ItemQuantity1, ItemCost))
         cursor.execute("DELETE FROM cart WHERE ItemName=? AND ItemQuantity=? AND UserId=?", (ItemName, ItemQuantity1, UserId,))
         cursor.execute("UPDATE inventory SET ItemQuantity=? WHERE ItemId=?", (ItemQuantityM, ItemId))
         connection.commit()
